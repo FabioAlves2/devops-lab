@@ -1,4 +1,25 @@
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
 def soma(a,b):
     return a+b
 
-print(soma(10,20))
+@app.route('/')
+def home():
+    return 'Pagina principal do devops lab!'
+
+@app.route('/soma')
+def soma_route():
+    a = request.args.get('a', type=int, default=0)
+    b = request.args.get('b', type=int, default=0)
+    resultado = soma(a, b)
+    return jsonify({"a": a, "b": b, "resultado": resultado})
+
+@app.route('/health')
+def health():
+    return "OK", 200
+    
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=80)
+    
