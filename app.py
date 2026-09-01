@@ -7,7 +7,7 @@ def soma(a,b):
 
 @app.route('/')
 def home():
-    return 'Pagina principal do devops lab!'
+    return 'Calculadora - Pagina principal do devops lab!'
 
 @app.route('/soma')
 def soma_route():
@@ -22,4 +22,3 @@ def health():
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
-    
