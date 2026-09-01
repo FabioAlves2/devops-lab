@@ -7,7 +7,7 @@ def soma(a,b):
 
 @app.route('/')
 def home():
-    return 'Calculadora - Pagina principal do devops lab!'
+    return 'Calculadora v2 - Deploy automatico via GitHub Actions!'
 
 @app.route('/soma')
 def soma_route():
