@@ -7,7 +7,7 @@ def soma(a,b):
 
 @app.route('/')
 def home():
-    return 'Calculadora v2 - Deploy automatico via GitHub Actions!'
+    return 'Calculadora v3 - Infra criada com Terraform (IaC)'
 
 @app.route('/soma')
 def soma_route():
